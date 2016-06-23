@@ -4,6 +4,7 @@
 2016-04-16 - Incomplete First Draft of People Database
 2016-05-05 - Incomplete Second Draft of the People Database, not all constraints implemented
 2016-06-07 - Incomplete Third Draft of the People Database
+2016-06-22 - Added USER_TABLE table to this Fourth People Database Draft
 
 */
 
@@ -100,7 +101,14 @@ CREATE TABLE EXECUTIVE
     PRIMARY KEY (EXECUTIVE_ID)
 );
 
-/* A one row table to properly define structure. */
+CREATE TABLE USER_TABLE
+(
+    USER_ID INTEGER NOT NULL AUTO_INCREMENT,
+    VERSION INTEGER, 
+    PERSON_ID INTEGER,
+    PRIMARY KEY (USER_ID)
+);
+
 CREATE TABLE ORGANIZATION
 (
     ORGANIZATION_ID INTEGER NOT NULL AUTO_INCREMENT,
